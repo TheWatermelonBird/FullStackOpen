@@ -8,6 +8,8 @@ sequenceDiagram
     server-->>browser: HTTP 302 Found, location: /notes
     deactivate server
 
+    Note right of server: Server gets a Payload with Form data
+
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
     server-->>browser: HTML document
