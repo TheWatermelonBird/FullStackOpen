@@ -5,10 +5,11 @@ sequenceDiagram
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
-    server-->>browser: HTTP 302 Found, location: /notes
-    deactivate server
 
     Note right of server: Server gets a Payload with Form data
+
+    server-->>browser: HTTP 302 Found, location: /notes
+    deactivate server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
